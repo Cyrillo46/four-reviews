@@ -51,13 +51,17 @@ function App() {
           <h1 className="author">{name}</h1>
           <h3 className="job">{job}</h3>
           <p className="info">{text}</p>
-          <button onClick={() => leftClick()}>
-            <FaChevronCircleLeft />
+          <div className="btn-container">
+            <button onClick={() => leftClick()} className="prev-btn">
+              <FaChevronCircleLeft />
+            </button>
+            <button onClick={() => rightClick()} className="next-btn">
+              <FaChevronCircleRight />
+            </button>
+          </div>
+          <button onClick={() => randomClick()} className="btn hipster-btn">
+            Random Person
           </button>
-          <button onClick={() => rightClick()}>
-            <FaChevronCircleRight />
-          </button>
-          <button onClick={() => randomClick()}>Random Person</button>
         </article>
       </main>
     </>
